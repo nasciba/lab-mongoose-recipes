@@ -10,3 +10,28 @@ mongoose.connect('mongodb://localhost/recipeApp', { useNewUrlParser: true })
     console.error('Error connecting to mongo', err);
   });
 
+Recipe.create ({
+  title: "Eggplant curry",
+  level: "easy",
+  ingredients: [
+      "1 eggplant",
+      "1tbs curry",
+      "1 tomato",
+      "3 cups of water",
+      "1 cup coconut milk"
+    ],
+  cuisine: "Thai",
+  image: "Eggplant curry",
+  duration: 25,
+  creator: "Amanda"
+
+})
+  .then (recipe => { console.log(`The ${recipe.title} was created!`)})
+
+
+
+
+
+
+  
+
